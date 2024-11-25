@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -19,21 +13,4 @@ model User {
   name    String
   password String
   isAdmin Boolean
-}
-
-model Question {
-   id      String   @id @default(auto()) @map("_id") @db.ObjectId
-   title   String
-   active Boolean
-   score Int
-   answers Answers[]
-}
-
-
-model Answers {
-   id      String   @id @default(auto()) @map("_id") @db.ObjectId
-   title   String
-   isCorrect Boolean
-   questions Question @relation(fields: [questionsId], references: [id])
-   questionsId String @db.ObjectId
 }
