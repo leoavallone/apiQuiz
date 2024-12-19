@@ -10,6 +10,9 @@
   "prisma": {
     "schema": "src/prisma/schema.prisma"
   },
+  "engines": {
+    "node": "22.3.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "moment": "^2.30.1",
     "prisma": "^5.22.0",
     "typescript": "^5.6.3"
   },

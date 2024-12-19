@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import userService from "../services/userService";
+import moment from 'moment';
 
 const getUsers = async (_req: Request, res: Response) => {
     try{
